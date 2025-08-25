@@ -43,27 +43,27 @@
 
       <!-- Action Buttons -->
       <div class="grid grid-cols-3 gap-2 mt-4">
-        <div class="flex justify-center items-center flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-add-money" class="flex justify-center items-center flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/wallet1.png" alt="">
           <p>Add Money</p>
         </div>
-        <div class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-cash-out" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/send1.png" alt="">
           <p>Cash Out</p>
         </div>
-        <div class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-transfer" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/money1.png" alt="">
           <p class="w-full text-center">Transfer Money</p>
         </div>
-        <div class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-Get-Bonus" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/bonus1.png" alt="">
           <p>Get Bonus</p>
         </div>
-        <div class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-pay-bill" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/purse1.png" alt="">
           <p>Pay Bill</p>
         </div>
-        <div class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
+        <div id="parent-transaction" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/transaction1.png" alt="">
           <p>Transactions</p>
         </div>
@@ -72,12 +72,12 @@
   </div> <!-- ✅ fixed closing -->
 
   <!-- Add Money Section -->
-   <div class="max-w-md mx-auto  ">
+   <div id="add-money" class="btn-6  max-w-md mx-auto hidden   ">
     <h1 class="font-bold ">Add Money</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
-      <form >
+      <form class="w-[380px]">
         <label>Select A Bank</label>
       <fieldset class="my-2">
         <select class="select focus:outline-none rounded-full w-full">
@@ -113,12 +113,12 @@
   </div>
 
     <!-- Cash Out Section -->
-    <div class="max-w-md mx-auto   ">
+    <div id="cash-out" class="btn-6  max-w-md mx-auto hidden  ">
     <h1 class="font-bold ">Cash Out</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
-      <form class="w-[350px]" >
+      <form class="w-[380px]" >
       <div class="mt-4">
         <label >Agent Number</label>
         <input id="Ac-Number" type="text" placeholder="Enter 11 digit number" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
@@ -143,12 +143,12 @@
   </div>
 
   <!-- Transfer Money Section -->
-    <div class="max-w-md mx-auto hidden ">
+    <div id="transfer" class="btn-6  max-w-md mx-auto hidden ">
     <h1 class="font-bold ">Transfer Money</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
-      <form class="w-[350px]" >
+      <form class="w-[380px]" >
       <div class="mt-4">
         <label >User Account Number</label>
         <input id="Ac-Number" type="text" placeholder="Enter 11 digit number" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
@@ -173,12 +173,12 @@
   </div>
 
    <!--  Get Bonus Section -->
-     <div class="max-w-md mx-auto hidden  ">
+     <div id="Get-Bonus" class="btn-6  max-w-md mx-auto hidden  ">
     <h1 class="font-bold ">Get Bonus</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
-      <form class="w-[350px]" >
+      <form class="w-[380px]" >
       <div class="mt-4">
         <label >Enter Bonus Coupon</label>
         <input id="Ac-Number" type="text" placeholder="Enter Your Coupon" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
@@ -193,12 +193,12 @@
   </div>
 
    <!--  Pay Bill Section -->
-   <div class="max-w-md mx-auto hidden ">
+   <div id="pay-bill" class="btn-6  max-w-md mx-auto hidden ">
     <h1 class="font-bold ">Pay Bill</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
-      <form >
+      <form class="w-[380px]">
         <label>Select to Pay</label>
       <fieldset class="my-2">
         <select class="select focus:outline-none rounded-full w-full">
@@ -234,16 +234,16 @@
   </div>
 
     <!-- Transaction History Section -->
-    <div class="max-w-md mx-auto hidden  ">
+    <div id="transaction" class="btn-6  max-w-md mx-auto hidden  ">
     <h1 class="font-bold ">Transaction History</h1>
   
-    <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
+    <div class="bg-white  w-[420px] mx-auto rounded-xl mt-4 p-5">
 
-      
+      <h1>transaction History</h1>
     </div>
   </div>
 
-
+<script src="turn.js"></script>
 <script src="home.js"></script>
 </body>
 </html>

@@ -41,3 +41,7 @@ buttonCashOut.addEventListener("click",function(even){
 
 totalBalance.innerText=total    
 })
+
+document.getElementById("btn-add-money").addEventListener("click",function(){
+    console.log("click")
+})
