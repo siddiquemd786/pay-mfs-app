@@ -1,3 +1,4 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#f4f2f7] min-h-screen w-full">
+<body class="bg-[#f4f2f7] min-h-screen w-full flex justify-center items-center flex-col">
 
   <!-- Green Card Section -->
   <div class="bg-white w-full max-w-md rounded-b-lg mb-8 mx-auto">
@@ -21,7 +22,7 @@
         <div class="flex items-center">
           <img class="h-[50px] w-[50px] object-cover" src="assets/Group.png" alt="">
           <div class="ml-2">
-            <h1 class="font-bold">$ <span>45000</span></h1>
+            <h1 class="font-bold">$ <span id="balance">45000</span></h1>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
         </div>
@@ -71,11 +72,13 @@
   </div> <!-- ✅ fixed closing -->
 
   <!-- Add Money Section -->
-   <div class="max-w-md mx-auto "><h1 class="font-semibold">Add Money</h1>
+   <div class="max-w-md mx-auto  ">
+    <h1 class="font-bold ml-5">Add Money</h1>
   
-    <div class="bg-white w-full rounded-xl mt-4 p-5">
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
 
-      <label>Select A Bank</label>
+      <form >
+        <label>Select A Bank</label>
       <fieldset class="my-2">
         <select class="select focus:outline-none rounded-full w-full">
           <option disabled selected>Select Bank</option>
@@ -88,30 +91,32 @@
 
       <div class="mt-4">
         <label>Bank Account Number</label>
-        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+        <input id="Ac-Number" type="text" placeholder="Enter 11 Digit Acount Number" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
       </div>
 
       <div class="mt-4">
-        <label>Bank Account Number</label>
-        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+        <label>Amount to Add</label>
+        <input id="Amount" type="text" placeholder="Add Amount" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
       </div>
 
       <div class="mt-4">
-        <label>Bank Account Number</label>
-        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+        <label>Pin Number</label>
+        <input id="pin" type="text" placeholder="Enter 4 Digit Pin Number" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
       </div>
 
       <div class="mt-5">
-        <button class="btn bg-[#0874F2] w-full rounded-full">Add Money</button>
+        <button id="btn-add-money" class="btn bg-[#0874F2] w-full rounded-full">Add Money</button>
       </div>
 
+      </form>
     </div>
   </div>
 
     <!-- Cash Out Section -->
-   <div class="max-w-md mx-auto mt-4 hidden"><h1 class="font-semibold">Add Money</h1>
+   <div class="max-w-md mx-auto mt-4 hidden ">
+    <h1 class="font-bold ml-5">Cash Out</h1>
   
-    <div class="bg-white w-full rounded-xl mt-4 p-5">
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
 
      
 
@@ -131,13 +136,119 @@
       </div>
 
       <div class="mt-5">
-        <button class="btn bg-[#0874F2] w-full rounded-full">Withdraw Money</button>
+        <button class="btn btn bg-[#0874F2] w-full rounded-full">Withdraw Money</button>
       </div>
 
     </div>
   </div>
 
+  <!-- Transfer Money Section -->
+   <div class="max-w-md mx-auto mt-4 hidden ">
+    <h1 class="font-bold ml-5">Transfer Money</h1>
+  
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
+
+     
+
+      <div class="mt-4">
+        <label>Agent Number</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-4">
+        <label>Amount</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-4">
+        <label>Pin Number</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-5">
+        <button class="btn bg-[#0874F2] w-full rounded-full">Transfer Money</button>
+      </div>
+
+    </div>
+  </div>
+
+   <!--  Get Bonus Section -->
+   <div class="max-w-md mx-auto mt-4 hidden">
+    <h1 class="font-bold ml-5">Get Bonus</h1>
+  
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
+
+     
+
+      <div class="mt-4">
+        <label>Enter Bonus Coupon</label>
+        <input type="text" placeholder="Enter your  Coupon" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+     
+
+     
+
+      <div class="mt-5">
+        <button class="btn bg-[#0874F2] w-full rounded-full">Get Bonus</button>
+      </div>
+
+    </div>
+  </div>
+
+   <!--  Pay Bill Section -->
+   <div class="max-w-md mx-auto mt-4 hidden ">
+    <h1 class="font-bold ml-5">Pay Bill</h1>
+  
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
+
+     
+
+      <div class="mt-4">
+        <label>Select to Paybill</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-4">
+        <label>Amount</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-4">
+        <label>Pin Number</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-5">
+        <button class="btn bg-[#0874F2] w-full rounded-full">Transfer Money</button>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- Transaction History Section -->
+   <div class="max-w-md mx-auto mt-4 hidden ">
+    <h1 class="font-bold ml-5">Transactionn History</h1>
+  
+    <div class="bg-white w-11/12 mx-auto rounded-xl mt-4 p-5">
+
+     
+
+      <div class="mt-4">
+        <label>Select to Paybill</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
+
+      <div class="mt-4">
+        <label>Amount</label>
+        <input type="text" placeholder="Type here" class="input w-full bg-[#f4f5f7] mt-2 rounded-full" />
+      </div>
 
 
+    </div>
+  </div>
+
+
+<script src="home.js"></script>
 </body>
 </html>
