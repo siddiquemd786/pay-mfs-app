@@ -7,6 +7,9 @@ const totalBalance=document.getElementById("balance")
 const buttonCashOut=document.getElementById("btn-Cash-Out")
 
 
+
+
+let pinData=1234
 function addMoneyConvert(id){
    
    
@@ -15,23 +18,36 @@ function addMoneyConvert(id){
    return valueConvert
     
 }
+
+
 // Add amount
 
 buttonAddMoney.addEventListener("click",function(even){
+   
     even.preventDefault()
+    
+    if(acountNumber.value.length !=11){
+      alert("please input your 11 digit Acount number")
+      return
+      
+    }
     const money=addMoneyConvert(addAmount)
    if (money === "" || money < 1 || isNaN(money)) {
   alert("⚠️ Invalid amount! Please enter a number greater than 0.");
-}else{
+}if (pinNumber.value!=pinData) {
+
+  alert("please input your 4 digit pin number")
+      return 
+} 
+else{
    const totalAmount=totalBalance.innerText
       const amount=parseInt(totalAmount)
    const total=money+amount
 
 totalBalance.innerText=total  
 
-}
-    
-   
+}  
+
 const addMoney = document.getElementById("add-head").innerText;
 
 const ul = document.getElementById("ul");
@@ -42,7 +58,7 @@ const li = document.createElement("li");
 li.innerText = `${addMoney},- ${date}`  ;   
 
 ul.appendChild(li);        
-console.log(li);  
+;  
 
 })
 
