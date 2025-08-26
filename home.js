@@ -20,18 +20,37 @@ function addMoneyConvert(id){
 buttonAddMoney.addEventListener("click",function(even){
     even.preventDefault()
     const money=addMoneyConvert(addAmount)
-    
+   if (money === "" || money < 1 || isNaN(money)) {
+  alert("⚠️ Invalid amount! Please enter a number greater than 0.");
+}else{
    const totalAmount=totalBalance.innerText
       const amount=parseInt(totalAmount)
    const total=money+amount
 
-totalBalance.innerText=total    
+totalBalance.innerText=total  
+
+}
+    
+   
+const addMoney = document.getElementById("add-head").innerText;
+
+const ul = document.getElementById("ul");
+const now=new Date()
+const date=now.toLocaleString()
+
+const li = document.createElement("li");
+li.innerText = `${addMoney},- ${date}`  ;   
+
+ul.appendChild(li);        
+console.log(li);  
+
 })
+
 
 // cash out
 buttonCashOut.addEventListener("click",function(even){
     even.preventDefault()
-    console.log("first")
+    
     const withdraw=document.getElementById("Amount-withdraw")
     const money=addMoneyConvert(withdraw)
     
@@ -39,9 +58,18 @@ buttonCashOut.addEventListener("click",function(even){
       const amount=parseInt(totalAmount)
    const total=amount-money
 
-totalBalance.innerText=total    
+totalBalance.innerText=total 
+
+const cashOut = document.getElementById("cash-head").innerText;
+
+const ul = document.getElementById("ul");
+const now=new Date()
+const date=now.toLocaleString()
+
+const li = document.createElement("li");
+li.innerText = `${cashOut},- ${date}`  ;   
+
+ul.appendChild(li);        
+console.log(li);
 })
 
-document.getElementById("btn-add-money").addEventListener("click",function(){
-    console.log("click")
-})

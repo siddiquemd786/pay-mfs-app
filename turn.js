@@ -16,7 +16,6 @@ transation.style.display="block"
 
 }
 
-
 document.getElementById("parent-add-money").addEventListener("click",function(){
  handaler("add-money")   
 })
@@ -33,10 +32,11 @@ document.getElementById("parent-Get-Bonus").addEventListener("click",function(){
  handaler("Get-Bonus")   
 })
 
-
 document.getElementById("parent-pay-bill").addEventListener("click",function(){
  handaler("pay-bill")   
 })
 document.getElementById("parent-transaction").addEventListener("click",function(){
  handaler("transaction")   
 })
+
+

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#f4f2f7] min-h-screen w-full flex justify-center items-center flex-col">
+<body class="bg-[#f4f2f7] min-h-screen w-full fixed flex justify-center  flex-col">
 
   <!-- Green Card Section -->
   <div class="bg-white w-full max-w-md rounded-b-lg mb-8 mx-auto">
@@ -19,7 +19,7 @@
       <div class="nav flex justify-between items-center">
         
         <!-- Left -->
-        <div class="flex items-center">
+        <div class="flex   items-center">
           <img class="h-[50px] w-[50px] object-cover" src="assets/Group.png" alt="">
           <div class="ml-2">
             <h1 class="font-bold">$ <span id="balance">45000</span></h1>
@@ -45,7 +45,7 @@
       <div class="grid grid-cols-3 gap-2 mt-4">
         <div id="parent-add-money" class="flex justify-center items-center flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/wallet1.png" alt="">
-          <p>Add Money</p>
+          <p class="text-center inline-block w-64">Add Money</p>
         </div>
         <div id="parent-cash-out" class="flex justify-center items-center h-[90px] flex-col border-2 rounded-xl p-5 border-[#0808081a]">
           <img src="assets/send1.png" alt="">
@@ -72,8 +72,8 @@
   </div> <!-- ✅ fixed closing -->
 
   <!-- Add Money Section -->
-   <div id="add-money" class="btn-6  max-w-md mx-auto hidden   ">
-    <h1 class="font-bold ">Add Money</h1>
+   <div id="add-money" class="btn-6  max-w-md mx-auto    ">
+    <h1 id="add-head" class="font-bold ">Add Money</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
@@ -114,7 +114,7 @@
 
     <!-- Cash Out Section -->
     <div id="cash-out" class="btn-6  max-w-md mx-auto hidden  ">
-    <h1 class="font-bold ">Cash Out</h1>
+    <h1 id="cash-head" class="font-bold ">Cash Out</h1>
   
     <div class="bg-white w-full mx-auto rounded-xl mt-4 p-5">
 
@@ -235,11 +235,13 @@
 
     <!-- Transaction History Section -->
     <div id="transaction" class="btn-6  max-w-md mx-auto hidden  ">
-    <h1 class="font-bold ">Transaction History</h1>
+    
   
     <div class="bg-white  w-[420px] mx-auto rounded-xl mt-4 p-5">
+<h1 class="font-bold ">Transaction History</h1>
+      <ul id="ul">
 
-      <h1>transaction History</h1>
+      </ul>
     </div>
   </div>
 
